@@ -100,3 +100,15 @@ months = remainYears * 12
 
 print(f"You have {days} days, {weeks} weeks, and {months} months left.")
 ```
+#### Project: Tip Calculator
+
+```python
+print("Welcome to the tip calculator!")
+bill = input("What was the total bill? $")
+tipPerc = input("How much tip would you like to give? 10, 12, 15? ")
+nrPeople = input("How many people to split the bill?")
+
+#Calculate the share
+share = (int(bill) * float(tipPerc) / 100 + int(bill)) / int(nrPeople)
+print("Each person should pay: $" + str(round(share,2)))
+```
