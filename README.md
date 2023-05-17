@@ -63,3 +63,40 @@ print("Your band name could be " + userName + " " + petName)
 ```
 
 ### :arrow_forward:Day 2 - Understanding Data types and how to manipulate strings
+
+#### Exercise 1
+Write a program that adds the digits in a 2 digit number. e.g. if the input was 35, then the output should be 3 + 5 = 8
+
+```python
+two_digit_number = (input("Type a two digit number: "))
+print(int(two_digit_number[0]) + int(two_digit_number[1]))
+```
+
+#### Exercise 2
+Write a program that calculates the Body Mass Index (BMI) from a user's weight and height.
+
+```python
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+bmi = float(weight) / float(height) ** 2
+print(int(bmi))
+```
+
+#### Exercise 3
+Create a program using maths and f-Strings that tells us how many days, weeks, months we have left if we live until 90 years old.
+
+***Hint:*** There are 365 days in a year, 52 weeks in a year and 12 months in a year.
+
+```python
+age = input("What is your current age? ")
+
+#Calculating the remaining years
+remainYears = 90 - int(age)
+
+#Calculating the remaining weeks, days and months
+days = remainYears * 365
+weeks = remainYears * 52
+months = remainYears * 12
+
+print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+```
