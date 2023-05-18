@@ -229,9 +229,47 @@ elif size == "L":
     else:
         price
 
-
-
 print(f"Your final bill is: ${price}.")
 ```
  
+#### Exercise 5
+You are going to write a program that tests the compatibility between two people.
 
+To work out the love score between two people:
+
+Take both people's names and check for the number of times the letters in the word TRUE occurs. 
+
+Then check for the number of times the letters in the word LOVE occurs. 
+
+Then combine these numbers to make a 2 digit number.
+
+```python
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+name = (name1 + name2).lower()
+#TRUE
+nrT = name.count("t")
+nrR = name.count("r")
+nrU = name.count("u")
+nrE = name.count("e")
+nrTrue = nrT + nrR + nrU + nrE
+
+#LOVE
+nrL = name.count("l")
+nrO = name.count("o")
+nrV = name.count("v")
+nrLove = nrL + nrO + nrV + nrE
+
+str_totalNr = str(nrTrue) + str(nrLove)
+int_totalNr = int(str_totalNr)
+
+#Find the compatibility
+if int_totalNr > 40 and int_totalNr < 50:
+    print(f"Your score is {str_totalNr}, you are alright together.")
+elif int_totalNr <= 10 or int_totalNr >= 90:
+    print(f"Your score is {str_totalNr}, you go together like coke and mentos.")
+else:
+    print(f"Your score is {str_totalNr}")
+```    
