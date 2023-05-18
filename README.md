@@ -6,7 +6,7 @@ In this repository, I will show the different Python exercises I will be doing o
 
 2- Show your progress every day.
 
-### :arrow_forward:Day 1 - Working with Variables in Python to Manage Data
+### :arrow_forward:`Day 1` - Working with Variables in Python to Manage Data
 #### Exercise 1
 Write a program that prints the notes using what you have learnt about the Python print function.
 ```python
@@ -62,7 +62,7 @@ petName = input("What's your pet's name?\n")
 print("Your band name could be " + userName + " " + petName)
 ```
 
-### :arrow_forward:Day 2 - Understanding Data types and how to manipulate strings
+### :arrow_forward:`Day 2` - Understanding Data types and how to manipulate strings
 
 #### Exercise 1
 Write a program that adds the digits in a 2 digit number. e.g. if the input was 35, then the output should be 3 + 5 = 8
@@ -112,3 +112,5 @@ nrPeople = input("How many people to split the bill?")
 share = (int(bill) * float(tipPerc) / 100 + int(bill)) / int(nrPeople)
 print("Each person should pay: $" + str(round(share,2)))
 ```
+
+### :arrow_forward:`Day 3` - Control Flow and Logical Operators
