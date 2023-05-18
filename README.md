@@ -114,3 +114,14 @@ print("Each person should pay: $" + str(round(share,2)))
 ```
 
 ### :arrow_forward:`Day 3` - Control Flow and Logical Operators
+
+#### Exercise 1
+Write a program that works out whether if a given number is an odd or even number.
+```python
+number = int(input("Which number do you want to check? ")
+
+if number % 2 == 0:
+    print("This is an even number.")
+else:
+    print("This is an odd number.")    
+```    
