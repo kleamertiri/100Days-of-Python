@@ -4,7 +4,7 @@ In this repository, I will show the different Python exercises I will be doing o
 ## Two main rules:
 1- Code minimum an hour every day for the next 100 days.
 
-2- Show your progress every day.
+2- Show your progress every day on social media.
 
 ### :arrow_forward:`Day 1` - Working with Variables in Python to Manage Data
 #### Exercise 1
