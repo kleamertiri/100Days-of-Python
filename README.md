@@ -320,3 +320,5 @@ if left_right == "left":
   else:
     print("You get attacked by trout. Game over.")
 ```    
+
+### :arrow_forward:`Day 4` - Randomisation and Python Lists
