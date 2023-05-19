@@ -7,13 +7,13 @@ In this repository, I will show the different Python exercises I will be doing o
 2- Show your progress every day on social media.
 
 ### :arrow_forward:`Day 1` - Working with Variables in Python to Manage Data
-#### Exercise 1
+#### :arrow_right: Exercise 1
 Write a program that prints the notes using what you have learnt about the Python print function.
 ```python
 #Write your code below this line 👇
 print("Day 1 - Python Print Function \nThe function is declared like this: \nprint('what to print')")
 ```
-#### Exercise 2
+#### :arrow_right: Exercise 2
 Write a program that prints the number of characters in a user's name.
 
 ```python
@@ -21,7 +21,7 @@ Write a program that prints the number of characters in a user's name.
 userName = input("What is your name? ")
 print(len(userName))
 ```
-#### Exercise 3
+#### :arrow_right: Exercise 3
 Write a program that switches the values stored in the variables a and b.
 
 ```python
@@ -46,7 +46,7 @@ a: 5
 
 b: 3
 
-#### Project: Band Name Generator
+#### :arrow_right: Project: Band Name Generator
 
 ```python
 #1. Create a greeting for your program.
@@ -64,7 +64,7 @@ print("Your band name could be " + userName + " " + petName)
 
 ### :arrow_forward:`Day 2` - Understanding Data types and how to manipulate strings
 
-#### Exercise 1
+#### :arrow_right: Exercise 1
 Write a program that adds the digits in a 2 digit number. e.g. if the input was 35, then the output should be 3 + 5 = 8
 
 ```python
@@ -72,7 +72,7 @@ two_digit_number = (input("Type a two digit number: "))
 print(int(two_digit_number[0]) + int(two_digit_number[1]))
 ```
 
-#### Exercise 2
+#### :arrow_right: Exercise 2
 Write a program that calculates the Body Mass Index (BMI) from a user's weight and height.
 
 ```python
@@ -82,7 +82,7 @@ bmi = float(weight) / float(height) ** 2
 print(int(bmi))
 ```
 
-#### Exercise 3
+#### :arrow_right: Exercise 3
 Create a program using maths and f-Strings that tells us how many days, weeks, months we have left if we live until 90 years old.
 
 ***Hint:*** There are 365 days in a year, 52 weeks in a year and 12 months in a year.
@@ -100,7 +100,7 @@ months = remainYears * 12
 
 print(f"You have {days} days, {weeks} weeks, and {months} months left.")
 ```
-#### Project: Tip Calculator
+#### :arrow_right: Project: Tip Calculator
 
 ```python
 print("Welcome to the tip calculator!")
@@ -115,7 +115,7 @@ print("Each person should pay: $" + str(round(share,2)))
 
 ### :arrow_forward:`Day 3` - Control Flow and Logical Operators
 
-#### Exercise 1
+#### :arrow_right: Exercise 1
 Write a program that works out whether if a given number is an odd or even number.
 ```python
 number = int(input("Which number do you want to check? ")
@@ -126,7 +126,7 @@ else:
     print("This is an odd number.")    
 ```    
 
-#### Exercise 2
+#### :arrow_right: Exercise 2
 Write a program that interprets the Body Mass Index (BMI) based on a user's weight and height.
 
 It should tell them the interpretation of their BMI based on the BMI value.
@@ -155,7 +155,7 @@ else:
     print(f"Your BMI is {bmi}, you are clinically obese.")
 ```    
     
-#### Exercise 3
+#### :arrow_right: Exercise 3
 Write a program that works out whether if a given year is a leap year.
 
 This is how you work out whether if a particular year is a leap year:
@@ -180,7 +180,7 @@ else:
     print("Not leap year.")
 ```    
 
-#### Exercise 4
+#### :arrow_right: Exercise 4
 Congratulations, you've got a job at Python Pizza. Your first job is to build an automatic pizza order program.
 
 Based on a user's order, work out their final bill.
@@ -232,7 +232,7 @@ elif size == "L":
 print(f"Your final bill is: ${price}.")
 ```
  
-#### Exercise 5
+#### :arrow_right: Exercise 5
 You are going to write a program that tests the compatibility between two people.
 
 To work out the love score between two people:
@@ -274,7 +274,7 @@ else:
     print(f"Your score is {str_totalNr}")
 ```    
 
-### Project: Treasure Island:old_key:
+#### :arrow_right: Project: Treasure Island:old_key:
 ![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/b9924570-7214-468f-812c-3b20e21c7b11)
 
 ```python
