@@ -335,3 +335,20 @@ if randomInt == 1:
 else:
     print("Tails")
 ```
+
+#### :arrow_right: Exercise 2
+You are going to write a program that will select a random name from a list of names. The person selected will have to pay for everybody's food bill.
+
+**Hint:** You might need the help of the `len()` function.
+
+```python
+import random
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+
+size = len(names)
+random_name = names[random.randint(0, size - 1)]
+print(f"{random_name} is going to buy the meal today!")
+```
+
