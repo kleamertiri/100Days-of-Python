@@ -322,3 +322,16 @@ if left_right == "left":
 ```    
 
 ### :arrow_forward:`Day 4` - Randomisation and Python Lists
+
+#### :arrow_right: Exercise 1
+You are going to write a virtual coin toss program. It will randomly tell the user "Heads" or "Tails".
+
+```python
+import random
+
+randomInt = random.randint(0,1)
+if randomInt == 1:
+    print("Heads")
+else:
+    print("Tails")
+```
