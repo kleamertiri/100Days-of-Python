@@ -514,3 +514,21 @@ for height in student_heights:
 averageHeight = round(sumHeight / counter)
 print(averageHeight)
 ```
+
+#### :arrow_right: Exercise 2
+You are going to write a program that calculates the highest score from a List of scores.
+
+**Important:** You are not allowed to use the max or min functions. The output words must match the example.
+
+```python
+student_scores = input("Input a list of student scores ").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+
+max_score = 0
+for score in student_scores:
+    if score > max_score:
+        max_score = score
+    
+print(max_score)
+```
