@@ -352,3 +352,28 @@ random_name = names[random.randint(0, size - 1)]
 print(f"{random_name} is going to buy the meal today!")
 ```
 
+#### :arrow_right: Exercise 3
+You are going to write a program that will mark a spot with an X  in the map, based on the user input.
+
+Map:
+
+['⬜️', '⬜️', '⬜️']
+
+['⬜️', '⬜️', '⬜️']
+
+['⬜️', '⬜️', '⬜️']
+
+```python
+row1 = ["⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","⬜️","️⬜️"]
+row3 = ["⬜️️","⬜️️","⬜️️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+
+horizontal = int(position[0])
+vertical = int(position[1])
+map[vertical -1][horizontal - 1] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
+```
