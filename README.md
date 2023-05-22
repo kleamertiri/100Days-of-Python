@@ -377,3 +377,62 @@ map[vertical -1][horizontal - 1] = "X"
 
 print(f"{row1}\n{row2}\n{row3}")
 ```
+
+#### :arrow_right: Project: Rock Paper Scissors
+
+```python
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
+comp_choice = random.randint(0,2)
+
+#User
+if user_choice == 0:
+  print("Rock:\n" + rock)
+elif user_choice == 1:
+  print("Paper:\n" + paper)
+else:
+  print("Scissors:\n" + scissors)
+
+#Computer   
+if comp_choice == 0:
+  print("Rock:\n" + rock)
+elif comp_choice == "1":
+  print("Paper:\n" + paper)
+else:
+  print("Scissors:\n" + scissors)
+  
+if (user_choice == 0 and comp_choice == 2) or (user_choice == 1 and comp_choice == 0) or (user_choice == 2 and comp_choice == 1):
+  print("You win!")
+elif (user_choice == 0 and comp_choice == 0) or (user_choice == 1 and comp_choice == 1) or (user_choice == 2 and comp_choice == 2):
+  print("It's a tie!")
+else:
+  print("You lose!")
+```
