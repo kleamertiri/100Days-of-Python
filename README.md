@@ -409,7 +409,6 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
 comp_choice = random.randint(0,2)
 
@@ -496,3 +495,22 @@ else:
 ```
 
 ### :arrow_forward:`Day 5` - Python Loops
+
+#### :arrow_right: Exercise 1
+You are going to write a program that calculates the average student height from a List of heights.
+
+**Important:** You should not use the `sum()` or `len()` functions in your answer. You should try to replicate their functionality using loops.
+```python
+student_heights = input("Input a list of student heights ").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+
+sumHeight = 0 
+counter = 0
+for height in student_heights:
+    sumHeight += height
+    counter += 1
+
+averageHeight = round(sumHeight / counter)
+print(averageHeight)
+```
