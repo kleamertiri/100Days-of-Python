@@ -431,7 +431,7 @@ else:
   
 if (user_choice == 0 and comp_choice == 2) or (user_choice == 1 and comp_choice == 0) or (user_choice == 2 and comp_choice == 1):
   print("You win!")
-elif (user_choice == 0 and comp_choice == 0) or (user_choice == 1 and comp_choice == 1) or (user_choice == 2 and comp_choice == 2):
+elif user_choice == comp_choice:
   print("It's a tie!")
 else:
   print("You lose!")
