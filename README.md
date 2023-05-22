@@ -494,3 +494,5 @@ elif user_choice == comp_choice:
 else:
   print("You lose!")
 ```
+
+### :arrow_forward:`Day 5` - Python Loops
