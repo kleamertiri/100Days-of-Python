@@ -532,3 +532,17 @@ for score in student_scores:
     
 print(max_score)
 ```
+
+#### :arrow_right: Exercise 3
+You are going to write a program that calculates the sum of all the even numbers from 1 to 100.
+
+**Important:** There should only be 1 print statement in your console output. It should just print the final total and not every step of the calculation.
+
+```python
+sum = 0
+for n in range(1, 101):
+    if n % 2 == 0:
+        sum += n
+
+print(sum)
+```
