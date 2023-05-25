@@ -607,3 +607,28 @@ print("Here is your randomised password: " + "".join(shuffle_list))
 ```
 
 ### :arrow_forward:`Day 6` - Python Functions & Karel
+
+#### :arrow_right: Exercise 1 - The Hurdles Loop
+
+![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/55ca3a59-5ba9-473f-a798-178ca309e36d)
+
+
+```python
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+def jump():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+for step in range(6):
+    jump()
+```
+
