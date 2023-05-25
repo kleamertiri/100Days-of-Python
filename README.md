@@ -605,3 +605,5 @@ for nestList  in list1:
 shuffle_list = random.sample(flat_list, len(flat_list))
 print("Here is your randomised password: " + "".join(shuffle_list))
 ```
+
+### :arrow_forward:`Day 6` - Python Functions & Karel
