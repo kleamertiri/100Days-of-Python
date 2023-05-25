@@ -589,7 +589,7 @@ lettersPass = random.sample(letters, nr_letters)
 symbolsPass = random.sample(symbols, nr_symbols)
 numberPass = random.sample(numbers, nr_numbers)
 
-#Easy Level - Order not randomised:
+#Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 print("Here is your password: " + "".join(lettersPass) + "".join(symbolsPass) + "".join(numberPass))
 
@@ -598,8 +598,8 @@ print("Here is your password: " + "".join(lettersPass) + "".join(symbolsPass) + 
 
 list1 = [lettersPass, symbolsPass, numberPass]
 flat_list = []
-for i  in list1:
-  for item in i:
+for sublist  in list1:
+  for item in sublist:
     flat_list.append(item)
 
 shuffle_list = random.sample(flat_list, len(flat_list))
