@@ -598,8 +598,8 @@ print("Here is your password: " + "".join(lettersPass) + "".join(symbolsPass) + 
 
 list1 = [lettersPass, symbolsPass, numberPass]
 flat_list = []
-for sublist  in list1:
-  for item in sublist:
+for nestList  in list1:
+  for item in nestList:
     flat_list.append(item)
 
 shuffle_list = random.sample(flat_list, len(flat_list))
