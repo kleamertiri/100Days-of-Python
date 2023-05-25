@@ -632,3 +632,5 @@ for step in range(6):
     jump()
 ```
 
+### :arrow_forward:`Day 7` - Hangman
+
