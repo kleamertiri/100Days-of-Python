@@ -714,8 +714,7 @@ logo = '''
  'frizzled', 'fuchsia', 'funny', 'gabby', 'galaxy', 'galvanize', 'gazebo', 'giaour', 'gizmo']
  ```
  
- 
- ```python
+```python
  import random
 import hangman_words
 import hangman_art
@@ -764,5 +763,7 @@ while not end_of_game:
 
     # Import the stages from hangman_art.py and make this error go away.
     print(hangman_art.stages[lives])
-    ```
+    
+```
  
+### :arrow_forward:`Day 8` - Function Parameters & Caesar Cipher
