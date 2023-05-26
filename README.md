@@ -634,3 +634,135 @@ for step in range(6):
 
 ### :arrow_forward:`Day 7` - Hangman
 
+`hangman_art.py`
+```python
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+logo = ''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
+
+ ```
+ 
+ `hangman_words.py`
+ ```python
+ word_list = ['abruptly', 'absurd', 'abyss', 'affix', 'askew','avenue','awkward','axiom','azure','bagpipes','bandwagon','banjo',
+ 'bayou','beekeeper','bikini','blitz','blizzard','boggle','bookworm','boxcar','boxful','buckaroo', 'buffalo', 'buffoon', 'buxom','buzzard','buzzing','buzzwords','caliph','cobweb','cockiness','croquet','crypt','curacao','cycle',
+ 'daiquiri','dirndl','disavow','dizzying','duplex','dwarves','embezzle','equip','espionage','euouae','exodus',
+ 'faking','fishhook', 'fixable','fjord', 'flapjack','flopping', 'fluffiness', 'flyby', 'foxglove', 'frazzled', 
+ 'frizzled', 'fuchsia', 'funny', 'gabby', 'galaxy', 'galvanize', 'gazebo', 'giaour', 'gizmo']
+ ```
+ 
+ 
+ ```python
+ import random
+import hangman_words
+import hangman_art
+chosen_word = random.choice(hangman_words.word_list)
+word_length = len(chosen_word)
+end_of_game = False
+lives = 6
+
+#Print the Hangman logo
+print(hangman_art.logo)
+
+#Create blanks
+display = []
+for _ in range(word_length):
+    display += "_"
+
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()
+
+    #If the user has entered a letter they've already guessed, print the letter and let them know.
+    if guess in display:
+      print(f"You already guessed the letter {guess}. Guess another letter")
+      
+    #Check guessed letter
+    for position in range(word_length):
+        letter = chosen_word[position]
+        #Replacing the _ with the actual letter
+        if letter == guess:
+            display[position] = letter
+
+    #Check if the letter is not part of the word
+    if guess not in chosen_word:
+        print(f"This letter {guess} is not in the word")
+        lives -= 1
+        if lives == 0:
+            end_of_game = True
+            print("You lose.")
+
+    #Join all the elements in the list and turn it into a String.
+    print(f"{' '.join(display)}")
+
+    #Check if user has got all letters.
+    if "_" not in display:
+        end_of_game = True
+        print("You win.")
+
+    # Import the stages from hangman_art.py and make this error go away.
+    print(hangman_art.stages[lives])
+    ```
+ 
