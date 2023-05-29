@@ -46,7 +46,7 @@ a: 5
 
 b: 3
 
-#### :arrow_right: Project: Band Name Generator
+#### :dart: Project: Band Name Generator
 
 ```python
 #1. Create a greeting for your program.
@@ -100,7 +100,7 @@ months = remainYears * 12
 
 print(f"You have {days} days, {weeks} weeks, and {months} months left.")
 ```
-#### :arrow_right: Project: Tip Calculator
+#### :dart: Project: Tip Calculator
 
 ```python
 print("Welcome to the tip calculator!")
@@ -274,7 +274,7 @@ else:
     print(f"Your score is {str_totalNr}")
 ```    
 
-#### :arrow_right: Project: Treasure Island:old_key:
+#### :dart: Project: Treasure Island:old_key:
 ![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/b9924570-7214-468f-812c-3b20e21c7b11)
 
 ```python
@@ -378,7 +378,7 @@ map[vertical -1][horizontal - 1] = "X"
 print(f"{row1}\n{row2}\n{row3}")
 ```
 
-#### :arrow_right: Project: Rock Paper Scissors
+#### :dart:  Project: Rock Paper Scissors
 
 ```python
 import random
@@ -566,7 +566,7 @@ for n in range(1, 101):
         print(n)
 ```
 
-#### :arrow_right: Project: Create e Password Generator
+#### :dart:  Project: Create e Password Generator
 
 ```python
 #Password Generator Project
@@ -805,3 +805,66 @@ def prime_checker(number):
 n = int(input("Check this number: "))
 prime_checker(number=n)
 ```
+
+#### :dart: Project: Caesar Cipher
+`art.py`
+```python
+logo = """           
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
+            88             88                                 
+           ""             88                                 
+                          88                                 
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+8b         88 88       d8 88       88 8PP""""""" 88          
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+              88                                             
+              88           
+"""
+```
+
+`main.py`
+```python
+import art
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
+'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 
+'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+print(art.logo)
+run_again = False
+
+def caesar(plain_text, shiftNr, enc_dec):
+  encry_decry_list = []
+  #Bug Fix: When the shift number is bigger then the list
+  if shiftNr >= len(alphabet):
+    shiftNr = shiftNr % len(alphabet)
+  
+  for letter in plain_text:
+    if letter in alphabet:
+      index = alphabet.index(letter)
+      if enc_dec == "encode" :
+        encry_decry_list += alphabet[index + shiftNr]
+      else:
+        encry_decry_list += alphabet[index - shiftNr]
+    else:  
+      encry_decry_list += letter
+      
+  if enc_dec == "encode":
+    print("Here's the encoded result: "+ "".join(encry_decry_list))
+  else:
+    print("Here's the decoded result:"+ "".join(encry_decry_list))
+
+while not run_again:
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+  text = list(input("Type your message:\n").lower())
+  shift = int(input("Type the shift number:\n"))
+  caesar(plain_text = text, shiftNr = shift, enc_dec = direction)
+  yes_no = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
+  if yes_no == "no":
+    print("Goodbye")
+    run_again = True
+  ```
