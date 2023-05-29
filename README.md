@@ -868,3 +868,5 @@ while not run_again:
     print("Goodbye")
     run_again = True
   ```
+
+### :arrow_forward:`Day 9` - Dictionaries, Nesting and the Secret Auction
