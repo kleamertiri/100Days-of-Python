@@ -997,3 +997,5 @@ while continue_bid:
   elif yes_no == 'yes':
     clear()
 ```
+
+### :arrow_forward:`Day 10` - Functions with Outputs
