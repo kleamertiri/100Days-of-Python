@@ -939,3 +939,58 @@ def add_new_country(country, visits_nr, cities_names):
 add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
 print(travel_log)
 ```
+
+#### :dart: Project: Blind Auction
+`art.py`
+
+```python
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+```
+
+
+
+`main.py`
+
+```python
+from replit import clear
+from art import logo
+#HINT: You can call clear() to clear the output in the console.
+print(logo)
+continue_bid = True
+auction_dict = {}
+
+def highest_bidding(bidding_dict):
+  high_bid = 0
+  winner=""
+  for bidder in bidding_dict:
+    bid_amount = bidding_dict[bidder]
+    if bid_amount > high_bid:
+      high_bid = bid_amount
+      winner = bidder
+  print(f"The winner is {winner} with a bid of ${high_bid}")
+      
+
+while continue_bid:
+  bid_name = input("What is your name?: ")
+  bid_sum = int(input("What is your bid?: $"))
+  auction_dict[bid_name] = bid_sum
+  yes_no = input("Are there any other bidders? Type 'yes' or 'no'. ").lower()
+
+  if yes_no == 'no':
+    continue_bid = False
+    highest_bidding(auction_dict) 
+  elif yes_no == 'yes':
+    clear()
+```
