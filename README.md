@@ -632,7 +632,7 @@ for step in range(6):
     jump()
 ```
 
-### :arrow_forward:`Day 7` - Hangman
+### :arrow_forward:`Day 7` - [Hangman](https://replit.com/@kleamertiri/Hangman?v=1)
 
 `hangman_art.py`
 ```python
@@ -806,7 +806,8 @@ n = int(input("Check this number: "))
 prime_checker(number=n)
 ```
 
-#### :dart: Project: Caesar Cipher
+#### :dart: Project: [Caesar Cipher](https://replit.com/@kleamertiri/Caesar-Cipher?v=1)
+
 `art.py`
 ```python
 logo = """           
@@ -940,7 +941,7 @@ add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
 print(travel_log)
 ```
 
-#### :dart: Project: Blind Auction
+#### :dart: Project: [Blind Auction](https://replit.com/@kleamertiri/Blind-Auction?v=1)
 ![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/61ac0d8c-63c7-474c-ae94-04cfee72f8d8)
 
 
