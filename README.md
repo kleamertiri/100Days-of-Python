@@ -941,6 +941,9 @@ print(travel_log)
 ```
 
 #### :dart: Project: Blind Auction
+![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/61ac0d8c-63c7-474c-ae94-04cfee72f8d8)
+
+
 `art.py`
 
 ```python
