@@ -1084,10 +1084,8 @@ while restart_calculation:
     answer = calculation(num1, num2)
   
     print(f"{num1} {operation_symbol} {num2} = {answer}")
-    yes_no = input(
-        f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: "
-    )
-  
+    yes_no = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ")
+
     if yes_no == 'y':
       num1 = answer
     elif yes_no == 'n':
