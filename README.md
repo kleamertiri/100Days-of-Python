@@ -1095,4 +1095,4 @@ while restart_calculation:
   continue_calculation = True
 ```
 
-### :arrow_forward:`Day 11` - The Blackjack Capstone Project
+
