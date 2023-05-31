@@ -1031,3 +1031,68 @@ month = int(input("Enter a month: "))
 days = days_in_month(year, month)
 print(days)
 ```
+
+#### :dart: Project: [Calculator](https://replit.com/@kleamertiri/Calculator?v=1)
+
+```python
+from replit import clear
+from art import logo
+
+#Add
+def add(n1, n2):
+    return n1 + n2
+
+
+#Substract
+def substract(n1, n2):
+    return n1 - n2
+
+
+#Divide
+def divide(n1, n2):
+    return n1 / n2
+
+
+#Multiply
+def multiply(n1, n2):
+    return n1 * n2
+
+
+#Dictionary where keys = operation's symbols, values = functions
+calc_operations = {
+  "+": add, 
+  "-": substract, 
+  "/": divide, 
+  "*": multiply
+}
+                  
+
+continue_calculation = True
+restart_calculation = True
+
+while restart_calculation:
+  print(logo)
+  num1 = int(input("What's the first number?: "))
+  for symbol in calc_operations:
+    print(symbol)
+  restart_calculation = False
+  while continue_calculation:
+    operation_symbol = input("Pick an operation: ")
+    num2 = int(input("What's the next number?: "))
+  
+    calculation = calc_operations[operation_symbol]
+    answer = calculation(num1, num2)
+  
+    print(f"{num1} {operation_symbol} {num2} = {answer}")
+    yes_no = input(
+        f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: "
+    )
+  
+    if yes_no == 'y':
+      num1 = answer
+    elif yes_no == 'n':
+      clear()
+      continue_calculation = False
+  restart_calculation = True
+  continue_calculation = True
+```
