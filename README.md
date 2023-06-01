@@ -1095,4 +1095,91 @@ while restart_calculation:
   continue_calculation = True
 ```
 
-### :arrow_forward:`Day 11` - The Blackjack Capstone Project :black_joker:
+### :arrow_forward:`Day 11` - The Blackjack Capstone Project 
+[ View the project :black_joker:](https://replit.com/@kleamertiri/The-Blackjack-Capstone?v=1) 
+
+```python
+#The Blackjack Capstone 🃏
+import random
+from replit import clear
+from art import logo
+
+
+#Function to get random cards
+def deal_card():
+  """Returns a random card from the deck"""
+  cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+  card = random.choice(cards)
+  return card
+
+#Function to calculate the sum
+def calculate_score(list_of_cards):
+  """Take a list of cards and calculate the sum of them."""
+  #Check for blackjack (ace + 10)
+  if sum(list_of_cards) == 21 and len(list_of_cards) == 2:
+    return 0
+  
+  #Check for an ace(11). If the score is > 21, replace 11 with 1 
+  if 11 in list_of_cards and sum(list_of_cards) > 21:
+    list_of_cards.remove(11)
+    list_of_cards.append(1)
+  
+  return sum(list_of_cards)  
+
+#Function to compare the scores
+def compare(user_score, computer_score):
+  if user_score == computer_score:
+    return "Draw!"
+  elif computer_score == 0:
+    return "Lose, the opponent has Blackjack"
+  elif user_score == 0:
+    return "Win with a blackjack"
+  elif user_score > 21:
+    return "You went over. You lose"
+  elif computer_score > 21:
+    return "The opponent went over. You win"
+  elif user_score > computer_score:
+    return "You win"
+  else:
+    return "You lose"
+      
+def game():
+  print(logo)
+  user_cards = []
+  computer_cards = []
+  #Getting the first two cards for the user and computer
+  for _ in range(2):
+    user_cards.append(deal_card()) 
+    computer_cards.append(deal_card())
+  
+  #For the user to take more cards
+  game_over = False
+  while not game_over:
+    user_score = calculate_score(user_cards)
+    computer_score = calculate_score(computer_cards)
+    
+    print(f"    Your cards: {user_cards}, current score: {user_score}")
+    print(f"    Computer's first card: {computer_cards[0]}")
+    
+    if user_score == 0 or computer_score == 0 or user_score > 21:
+      game_over = True
+    else:
+      next_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+      if next_deal == 'y':
+        user_cards.append(deal_card()) 
+      else:
+        game_over = True
+      
+  #For the computer to take more cards
+  while computer_score != 0 and computer_score < 17:
+    computer_cards.append(deal_card())
+    computer_score = calculate_score(computer_cards)
+  
+  print(f"    Your final hand: {user_cards}, final score: {user_score}")
+  print(f"    Computer's final hand: {computer_cards}, final score: {computer_score}")
+  print(compare(user_score, computer_score))
+
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y':
+  clear()
+  game()
+```
