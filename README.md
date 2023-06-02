@@ -1183,3 +1183,5 @@ while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y'
   clear()
   game()
 ```
+
+### :arrow_forward:`Day 12` - Scope & Number Guessing Game
