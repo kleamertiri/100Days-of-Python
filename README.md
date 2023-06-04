@@ -1185,3 +1185,47 @@ while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y'
 ```
 
 ### :arrow_forward:`Day 12` - Scope & Number Guessing Game
+
+```python
+import random
+
+EASY_ATTEMPS = 10
+HARD_ATTEMPS = 5
+winning = False
+
+#Function to check the user's guess against the random number
+def check_number(guess, answer):
+  if guess < answer:
+      print("Too low.\nGuess Again.\n")  
+  elif guess > answer:
+      print("Too high.\nGuess Again.\n")
+  else:
+      print(f"You got it. The answer is {answer}")
+
+#Function to set the difficulty
+def set_difficulty():
+  level = input("Choose the level of difficulty. Take 'easy' or 'hard' ".lower())
+  if level == 'easy':
+    return EASY_ATTEMPS
+  else:
+    return HARD_ATTEMPS
+                
+def game():
+  print("Welcome to the Number Guessing Game!")
+  print("I'm thinking of a number between 1 and 100.")
+  random_number = random.randint(1,100)
+  print(random_number)
+  
+  
+  turns = set_difficulty()
+  guess = 0
+  while guess != random_number and turns > 0:
+    print(f"You have {turns} attempts remaining.")
+    guess = int(input("Make a guess: "))
+    check_number(guess, random_number)
+    turns -= 1
+    if turns == 0:
+      print("You are out of attemps. You lose")
+
+game()
+```
