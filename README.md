@@ -1191,14 +1191,14 @@ import random
 
 EASY_ATTEMPS = 10
 HARD_ATTEMPS = 5
-winning = False
+
 
 #Function to check the user's guess against the random number
 def check_number(guess, answer):
   if guess < answer:
-      print("Too low.\nGuess Again.\n")  
+      print("Too low.\n")  
   elif guess > answer:
-      print("Too high.\nGuess Again.\n")
+      print("Too high.\n")
   else:
       print(f"You got it. The answer is {answer}")
 
@@ -1214,7 +1214,7 @@ def game():
   print("Welcome to the Number Guessing Game!")
   print("I'm thinking of a number between 1 and 100.")
   random_number = random.randint(1,100)
-  print(random_number)
+  # print(random_number)
   
   
   turns = set_difficulty()
@@ -1225,7 +1225,10 @@ def game():
     check_number(guess, random_number)
     turns -= 1
     if turns == 0:
-      print("You are out of attemps. You lose")
+      print("You are out of attemps. You lose.")
+      return
+    elif guess != random_number:
+      print("Guess again.")
 
 game()
 ```
