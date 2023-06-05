@@ -1186,6 +1186,8 @@ while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y'
 
 ### :arrow_forward:`Day 12` - Scope & Number Guessing Game
 
+[View the game](https://replit.com/@kleamertiri/Guess-the-number-Game?v=1)
+
 ```python
 import random
 
