@@ -1234,3 +1234,18 @@ def game():
 
 game()
 ```
+
+### :arrow_forward:`Day 13` - Debugging: How to find and fix errors in your code
+**Steps:**
+
+1- Describe the problem
+
+2- Reproduce the Bug
+
+3- Play computer and evaluate each line
+
+4- Fixing errors and watching for Red Lines
+
+5- Squash bugs with a `print()` statement
+
+6- Using a [**Debugger**](https://pythontutor.com/)
