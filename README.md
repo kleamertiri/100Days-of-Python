@@ -1249,3 +1249,5 @@ game()
 5- Squash bugs with a `print()` statement
 
 6- Using a [**Debugger**](https://pythontutor.com/)
+
+### :arrow_forward:`Day 14` - Higher Lower Game Project
