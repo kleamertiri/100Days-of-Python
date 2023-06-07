@@ -1250,4 +1250,45 @@ game()
 
 6- Using a [**Debugger**](https://pythontutor.com/)
 
-### :arrow_forward:`Day 14` - Higher Lower Game Project
+### :arrow_forward:`Day 14` - [Higher Lower Game Project](https://replit.com/@kleamertiri/Higher-Lower-Game?v=1)
+
+```python
+import random
+import art
+from game_data import data
+from replit import clear
+a = random.choice(data)
+score = 0
+right = True
+
+
+#Checking followers
+while right:
+  print(art.logo)
+  b = random.choice(data)
+  print(f"Compare A: {a['name']}, a {a['description']}, from {a['country']}")
+  print(art.vs)
+  print(f"Against B: {b['name']}, a {b['description']}, from {b['country']}")   
+
+  a_or_b = input("Who has more followers? Type 'A' or 'B': ").lower()
+  if a_or_b == 'a':
+    if a['follower_count'] > b['follower_count']:
+      
+      score += 1
+      print(f"\nYou are right! Current score: {score}")
+      a = b
+      
+    else:
+      
+      print(f"\nOops! You are wrong. Final score: {score}")
+      right = False
+  else:
+      if a['follower_count'] < b['follower_count']:
+        score +=1
+        print(f"\nYou are right! Current score: {score}")
+        a = b
+      else:
+        print(f"\nOops! You are wrong. Final score {score}")
+        right = False
+  clear()
+```
