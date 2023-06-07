@@ -1260,17 +1260,19 @@ from replit import clear
 a = random.choice(data)
 score = 0
 right = True
+print(art.logo)
 
 
 #Checking followers
 while right:
-  print(art.logo)
   b = random.choice(data)
   print(f"Compare A: {a['name']}, a {a['description']}, from {a['country']}")
   print(art.vs)
   print(f"Against B: {b['name']}, a {b['description']}, from {b['country']}")   
 
   a_or_b = input("Who has more followers? Type 'A' or 'B': ").lower()
+  clear()
+  print(art.logo)
   if a_or_b == 'a':
     if a['follower_count'] > b['follower_count']:
       
@@ -1290,5 +1292,5 @@ while right:
       else:
         print(f"\nOops! You are wrong. Final score {score}")
         right = False
-  clear()
+  
 ```
