@@ -1294,3 +1294,73 @@ while right:
         right = False
   
 ```
+**OR**
+
+```python
+import art
+import random
+from game_data import data
+from replit import clear
+
+#Functions
+def format_data(account):
+  '''Format the data into a printable format'''
+  name = account['name']
+  description = account['description']
+  country = account['country']
+  return f"{name}, a {description}, from {country}"
+
+def check_answer(guess, a_followers, b_followers):
+  '''Take the user guess and follower counts and returns if they got it right'''
+  if a_followers > b_followers:
+    # if guess == a:
+    #   return True
+    # else:
+    #   return False
+    return guess == 'a'
+  else:
+    return guess == 'b'
+
+
+
+#Displaying art
+print(art.logo)
+score = 0
+right = True
+
+#Choosing two(a, b) random data set from game_date.py 
+account_a = random.choice(data)
+
+#Make the game repeatebale
+while right:
+  account_b = random.choice(data)
+  if account_a == account_b:
+    account_b = random.choice(data)
+
+  a = print("Compare A: " + format_data(account_a))
+  print(art.vs)
+  b = print("Against B: " + format_data(account_b))
+  
+  #Getting user's input
+  user_guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+
+  #Clear the screen
+  clear()
+  print(art.logo)
+  #Checking the user's input 
+  ## Comparing the number of followers
+  a_followers = account_a['follower_count']
+  b_followers = account_b['follower_count']
+  
+  is_correct = check_answer(user_guess, a_followers, b_followers)
+  
+  #Give user feedback and track their score
+  if is_correct:
+    score += 1
+    print(f"\nYou are right! Current score: {score}")
+    #Change a = b and generate a new random data set for b, when the user is correct
+    account_a = account_b
+  else:
+    print(f"\nOops! You are wrong. Total score: {score}")
+    right = False
+ ```
