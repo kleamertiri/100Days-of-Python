@@ -1364,3 +1364,103 @@ while right:
     print(f"\nOops! You are wrong. Total score: {score}")
     right = False
  ```
+
+### :arrow_forward:`Day 15` - [The Coffee Machine☕](https://replit.com/@kleamertiri/Coffee-Machine?v=1)
+
+```python
+MENU = {
+    "espresso": {
+        "ingredients": {
+            "water": 50,
+            "coffee": 18,
+        },
+        "cost": 1.5,
+    },
+    "latte": {
+        "ingredients": {
+            "water": 200,
+            "milk": 150,
+            "coffee": 24,
+        },
+        "cost": 2.5,
+    },
+    "cappuccino": {
+        "ingredients": {
+            "water": 250,
+            "milk": 100,
+            "coffee": 24,
+        },
+        "cost": 3.0,
+    }
+}
+
+profit = 0
+resources = {
+    "water": 300,
+    "milk": 200,
+    "coffee": 100,
+}
+
+#4 Function to compare the ingredients
+def is_resources_enough(ingredients):
+  for item in ingredients:
+    if ingredients[item] > resources[item]:
+      print(f"Sorry there is not enough {item}.")
+      return False
+  return True
+
+#5
+def process_coins():
+  '''Returns the total calculated from coins inserted.'''
+  print("Please insert coins. ")
+  quarters = int(input("How many quarters?: "))
+  dimes = int(input("How many dimes?: "))
+  nickels = int(input("How many nickels?: "))
+  pennies = int(input("How many pennies?: "))
+  total = (quarters * 0.25) + (dimes * 0.1) + (nickels * 0.05) + (pennies * 0.01)
+  return total
+
+
+#6
+def is_transaction_successful(user_money, cost_drink):
+  '''Return True, when the payment is accepted, or False if money is insufficient'''
+  if user_money < cost_drink:
+    print("Sorry that's not enough money. Money refunded.")
+    return False
+  elif user_money >= cost_drink:
+    change = user_money - cost_drink
+    if change > 0:
+      print(f"Here is ${round(change, 2)} dollars in change.")
+    global profit
+    profit += cost_drink
+    return True
+
+#7
+def make_coffee(drink_name, order_ingredients):
+  '''Deduct the required ingredients from the resources.'''
+  for item in order_ingredients:
+    resources[item] -= order_ingredients[item]
+  print(f"Here is your {drink_name} ☕. Enjoy!")
+  
+  
+choice = True
+#1
+while choice:
+  coffee_choice = input("What would you like? (espresso/latte/cappuccino): ")
+  #2
+  if coffee_choice == "off":
+    choice = False
+  #3
+  elif coffee_choice == "report":
+    for key, value in resources.items():
+      print(key.capitalize(), ": ", value)
+    print(f"Money: ${float(profit)}")
+  else:
+    drink = MENU[coffee_choice]
+    if is_resources_enough(drink['ingredients']):
+      payment = process_coins()
+      if is_transaction_successful(payment, drink['cost']):
+        make_coffee(coffee_choice, drink['ingredients'])
+  ```
+  
+    
