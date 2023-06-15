@@ -1464,4 +1464,22 @@ while choice:
   ```
   
   ### :arrow_forward:`Day 16` - Object Oriented Programming **(OOP)**
-    
+  
+  ```python
+  from prettytable import PrettyTable
+x = PrettyTable()
+x.field_names = ["Pokemon Name", "Type"]
+x.add_rows(
+  [
+    ["Pikachu", "Electric"],
+    ["Squirtle", "Water"],
+    ["Charmander", "Fire"]
+  ]
+)
+
+x.align = "l"
+print(x)
+```
+
+![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/fb428356-b9b5-4297-bc89-d4bd5b7145d3)
+
