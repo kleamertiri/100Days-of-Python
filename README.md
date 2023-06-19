@@ -1483,3 +1483,32 @@ print(x)
 
 ![image](https://github.com/kleamertiri/100Days-of-Python/assets/105167291/fb428356-b9b5-4297-bc89-d4bd5b7145d3)
 
+[Solution](https://replit.com/@kleamertiri/Coffee-Maker-in-OOP?v=1)
+
+```python
+from menu import Menu, MenuItem
+from coffee_maker import CoffeeMaker
+from money_machine import MoneyMachine
+
+#Creating the objects
+money_machine = MoneyMachine()
+coffee_maker = CoffeeMaker()
+menu = Menu()
+choice = True
+
+while choice:
+  coffee_choice = input(f"What would you like? ({menu.get_items()}): ")
+  
+  if coffee_choice == "off":
+    choice = False
+  
+  elif coffee_choice == "report":
+    coffee_maker.report()
+    money_machine.report()
+  else:
+    drink = menu.find_drink(coffee_choice)
+    if coffee_maker.is_resource_sufficient(drink):
+      if money_machine.make_payment(drink.cost):
+        coffee_maker.make_coffee(drink)
+```
+
