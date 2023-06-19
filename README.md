@@ -1512,3 +1512,4 @@ while choice:
         coffee_maker.make_coffee(drink)
 ```
 
+### :arrow_forward:`Day 17` - The Quiz Project & the benefits of OOP
